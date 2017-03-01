@@ -1,0 +1,29 @@
+{
+  "name": "SillyRabbit",
+  "version": "1.0.0",
+  "description": "Silly Rabbit is an endless runner game inspired by Google's T-Rex runner game.",
+  "main": "bundle.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skim6281/SillyRabbit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skim6281/SillyRabbit/issues"
+  },
+  "homepage": "https://github.com/skim6281/SillyRabbit#readme",
+  "dependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-es2015": "^6.22.0",
+    "webpack": "^2.2.1"
+  }
+}

@@ -1,0 +1,25 @@
+body {
+  font-family: arial, sans-serif;
+  font-size: 16px;
+  background-color: #F8F7ED;
+  color: #423A33;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 600px;
+  height: 360px;
+}
+
+canvas {
+    margin: 0 auto;
+  border: dotted 1px #423A33;
+  background-color: #FFF;
+  top: 0;
+  left: 0;
+  border: 1px solid black;
+  z-index: 1;
+  width: 600px;
+  height: 360px;
+  box-sizing: border-box;
+}
