@@ -7,19 +7,24 @@ body {
 
 .wrapper {
   margin: 0 auto;
-  width: 600px;
-  height: 360px;
+  width: 800px;
+  height: 480px;
 }
 
 canvas {
-    margin: 0 auto;
+  margin: 0 auto;
   border: dotted 1px #423A33;
   background-color: #FFF;
   top: 0;
   left: 0;
   border: 1px solid black;
   z-index: 1;
-  width: 600px;
-  height: 360px;
+  width: 800px;
+  height: 480px;
   box-sizing: border-box;
+}
+
+.background-canvas {
+  height: auto;
+  width: 100%;
 }
