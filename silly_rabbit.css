@@ -28,3 +28,11 @@ canvas {
   height: auto;
   width: 100%;
 }
+
+h1 {
+  font-weight: bold;
+  text-align: center;
+  font-size: 48px;
+  margin: 20px;
+  font-family: 'Indie Flower';
+}
