@@ -9,6 +9,7 @@ body {
   margin: 0 auto;
   width: 800px;
   height: 480px;
+  position: relative;
 }
 
 canvas {
@@ -35,4 +36,20 @@ h1 {
   font-size: 48px;
   margin: 20px;
   font-family: 'Indie Flower';
+}
+
+#mute {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  font-family: "Indie Flower";
+}
+
+#mute:hover {
+  cursor: pointer;
+}
+
+.unmute {
+  text-decoration: line-through;
 }
