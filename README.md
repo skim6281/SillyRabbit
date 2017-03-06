@@ -1,7 +1,7 @@
 # Silly Rabbit
 ![Silly Rabbit](./docs/screenshot.png)
 
-[Live](http://samuelkim.us/silly_rabbit)
+[Live](http://samuelkim.us/SillyRabbit/)
 
 Silly Rabbit is an endless runner game inspired by Google Chrome's T-Rex game.
 
