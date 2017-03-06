@@ -39,7 +39,7 @@ Only three obstacles(carrots) exist on the stage.  The carrots randomly spawn be
 ```
 
 ### Collision
-Collision was implemented by using CreateJS's EaselJS library. Using the `localToLocal()` and `hitTest()` method, I checked to see if the Rabbit object's hitbox would hit a Carrot object's hitbox.
+Collision was implemented by using CreateJS's EaselJS library. Using the `localToLocal()` and `hitTest()` method, collision occurs if the rabbit's hitbox would intersect with the point from the carrot's coordinate space, relative to the rabbit's hitbox.
 ```js
 for (let i = 0; i < 3; i++) {
   let pt = carrots[i].hitBox.localToLocal(45, 290, rabbit.hitBox);
