@@ -20,8 +20,8 @@ canvas {
   left: 0;
   border: 1px solid black;
   z-index: 1;
-  width: 800px;
-  height: 480px;
+  width: 100%;
+  height: 100%;
   box-sizing: border-box;
 }
 
@@ -52,4 +52,33 @@ h1 {
 
 .unmute {
   text-decoration: line-through;
+}
+
+footer {
+  width: 800px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #423A33;
+  box-sizing: border-box;
+  font-family: "Indie Flower";
+  font-weight: bold;
+  background-color: #FFF;
+}
+
+footer > section {
+  padding: 12px;
+  text-align: center;
+  width: 33.33%;
+}
+
+footer > section:first-child {
+  border-right: 1px solid #423A33;
+}
+
+footer > section:last-child {
+  padding: 10px 40px;
+  border-left: 1px solid #423A33;
+  display: flex;
+  justify-content: space-between;
 }
