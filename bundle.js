@@ -148,13 +148,13 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Carrot = function () {
-  function Carrot(stage, image, groundHeight) {
+  function Carrot(stage, image, x, y) {
     _classCallCheck(this, Carrot);
 
     this.width = stage.canvas.width;
     this.height = stage.canvas.height;
     this.body = new createjs.Bitmap(image);
-    this.body.setTransform(Math.random() * this.width + this.width, this.height - this.body.image.height - groundHeight + 50);
+    this.body.setTransform(x, y);
     this.hitBox = new createjs.Shape();
     this.hitBox.graphics.drawRect(this.body.x, this.body.y + 20, 27, 65);
     this.hitBox.x = this.body.x;
@@ -163,12 +163,12 @@ var Carrot = function () {
 
   _createClass(Carrot, [{
     key: "move",
-    value: function move(delta) {
+    value: function move(delta, i) {
       this.body.x -= delta * 400;
       this.hitBox.x = this.body.x;
 
       if (this.body.x + this.body.image.width <= 0) {
-        this.body.x = Math.random() * this.width + this.width;
+        this.body.x = Math.random() * this.width + this.width * (i + 1) / 3 + this.width;
         this.hitBox.x = this.body.x;
       }
     }
@@ -444,10 +444,14 @@ var start = function start() {
   var groundImg = loader.getResult("ground");
   bg = new _background2.default(stage, loader, groundImg);
 
+  var carrotImg = loader.getResult("carrot");
+  var y = height - carrotImg.height - groundImg.height + 50;
   for (var i = 0; i < 3; i++) {
-    carrot = new _carrot2.default(stage, loader.getResult("carrot"), groundImg.height);
+    var x = Math.random() * width + width * (i + 1) / 3 + width;
+    carrot = new _carrot2.default(stage, carrotImg, x, y);
     carrots.push(carrot);
   }
+
   rabbit = new _rabbit2.default((0, _spriteSheet2.default)(loader.getResult("rabbit")));
 
   stage.addChild(bg.back, bg.bush, bg.grass);
@@ -482,7 +486,7 @@ var handleTick = function handleTick(e) {
 
   for (var i = 0; i < 3; i++) {
     carrot = carrots[i];
-    carrot.move(deltaS);
+    carrot.move(deltaS, i);
   }
 
   score += 1;
